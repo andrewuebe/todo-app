@@ -1,0 +1,2 @@
+<app-todo-form *ngIf="isFormOpen" (onSubmitTodo)="saveTodo($event)"></app-todo-form>
+<app-todo-item *ngFor="let todo of todos" (updateTodoFeeling)="updateTodoFeeling($event)" [todo]="todo" (onCompleteTodo)="completeTodo(todo)"></app-todo-item>

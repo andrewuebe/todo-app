@@ -1,0 +1,20 @@
+<div class="todo">
+  <div class="todo-text"><input type="text" id="text" (keyup)="onKeyUp($event)" placeholder="What needs to get done?"></div>
+  <div class="todo-info">
+    <div class="todo-deadline">
+      <div class="label">To be completed by</div>
+      <input type="text" id="time" (keyup)="onKeyUp($event)">
+    </div>
+    <div class="todo-feeling">
+      I'm feeling
+      <app-feelings
+        (onFeelingSelection)="onUpdateTodoFeeling($event)"
+        [feeling]="todo.feeling"
+      ></app-feelings>
+      about this task.
+    </div>
+  </div>
+  <div class="todo-submit" (click)="onSubmit(todo)">
+    <button class="button submit">Save</button>
+  </div>
+</div>

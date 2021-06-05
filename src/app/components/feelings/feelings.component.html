@@ -1,0 +1,17 @@
+<div class="feelings-container" (click)="toggleOpenFeelingOptions()">
+    <angular-emojis *ngIf="curFeeling === 'smile'" [name]="'smile'" size="20"></angular-emojis>
+    <angular-emojis *ngIf="curFeeling === 'rage'" [name]="'rage'" size="20"></angular-emojis>
+    <angular-emojis *ngIf="curFeeling === 'stopwatch'" [name]="'stopwatch'" size="20"></angular-emojis>
+    <angular-emojis *ngIf="curFeeling === 'question'" [name]="'question'" size="20"></angular-emojis>
+    <div class="feelings-options" *ngIf="isClicked">
+        <div class="feelings-option" id="happy" (click)="handleFeelingSelection($event)">
+            <angular-emojis [name]="'smile'" size="14"></angular-emojis>
+        </div>
+        <div class="feelings-option" id="angry" (click)="handleFeelingSelection($event)">
+            <angular-emojis [name]="'rage'" size="14"></angular-emojis>
+        </div>
+        <div class="feelings-option" id="hurry" (click)="handleFeelingSelection($event)">
+            <angular-emojis [name]="'stopwatch'" size="14"></angular-emojis>
+        </div>
+    </div>
+</div>

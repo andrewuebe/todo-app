@@ -1,0 +1,15 @@
+<div class="todo">
+  <div class="todo-text">{{ todo.text }}</div>
+  <div class="todo-info">
+    <div class="todo-deadline">
+      <div class="label">To be completed by</div>
+      {{ todo.deadline }}
+    </div>
+    <div class="todo-feeling">
+      I'm feeling <app-feelings (onFeelingSelection)="onUpdateTodoFeeling($event)" [feeling]="todo.feeling"></app-feelings> about this task.
+    </div>
+  </div>
+  <div class="todo-complete" (click)="onComplete(todo)">
+    <angular-emojis [name]="'white_check_mark'" size="20"></angular-emojis>
+  </div>
+</div>
